@@ -92,6 +92,78 @@ th {
     font-size: 25px;
 }
 
+/*styiling zodat de tickets er ook uit zien als concert tickets*/
+
+.table {
+    width: 800px;
+    margin: 40px auto;
+    border-collapse: separate;
+    border-spacing: 0 20px; /* space between tickets */
+    background: none;
+}
+
+/* zorgt ervoor dat iedereen zijn eigen ticket krijgt */
+.table tr {
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* cellen */
+.table td {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+/*verbergd de kopjes naam, id, enz*/
+.table th {
+    display: none;
+}
+
+/*linkse gedeelte van de tickets*/
+.table td:first-child {
+    background: #111;
+    color: #fff;
+    width: 80px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-right: 2px dashed #ccc; /* zorgd ervoor dat dat zwarte stukje 
+    die lijn er meer uitziet als een concert kaartje 
+    (supergoeie uitleg weet ik)*/
+}
+
+/*naam*/
+.table td:nth-child(2) {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/*email*/
+.table td:nth-child(3) {
+    font-size: 14px;
+    color: #777;
+}
+
+/*date + time highlight*/
+.table td:nth-child(4),
+.table td:nth-child(5) {
+    font-size: 16px;
+    color: #000;
+}
+
+/*rounded corners fix*/
+.table tr td:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.table tr td:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
 
 
 

@@ -15,13 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST["email"];
 
     // Hiermee stel je automatisch een vaste datum en tijd in
-    $datum = "2026-04-01";
-    $tijd  = "12:00:00";
+    $datum = "2026-06-09";
+    $tijd  = "18:00:00";
 
     $stmt = $conn->prepare("INSERT INTO tb_tickets(naam, email, datum, tijd) VALUES (?, ?, ?, ?)");
     $stmt->execute([$naam, $email, $datum, $tijd]);
 
     header("Location: order.php");
+    
     exit;
 }
 ?>
