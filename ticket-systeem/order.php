@@ -37,6 +37,9 @@ include ("../includes/connection.php");
                 email
                 <input type="text" name="email" required class="email" placeholder="email">
 
+                datum
+                <input type="date" name="start-date" required id="start" value="" placeholder="datum" min="2026-04-25" max="2026-04-26">
+
                 <br><br>
                 <input class="order-button" type="submit" value="bestel jouw kaartje">
                 <br><br> 

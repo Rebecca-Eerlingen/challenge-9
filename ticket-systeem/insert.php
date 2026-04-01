@@ -13,9 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $naam = $_POST["naam"];
     $email = $_POST["email"];
+    $datum = $_POST["datum"];
 
-    // Hiermee stel je automatisch een vaste datum en tijd in
-    $datum = "2026-06-09";
+    // Hiermee stel je automatisch een vaste tijd in
     $tijd  = "18:00:00";
 
     $stmt = $conn->prepare("INSERT INTO tb_tickets(naam, email, datum, tijd) VALUES (?, ?, ?, ?)");

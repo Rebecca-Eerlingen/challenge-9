@@ -144,7 +144,7 @@ th {
 /*email*/
 .table td:nth-child(3) {
     font-size: 14px;
-    color: #777;
+    color: #000;
 }
 
 /*date + time highlight*/
