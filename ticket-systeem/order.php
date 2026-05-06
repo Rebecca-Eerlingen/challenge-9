@@ -6,6 +6,7 @@ error_reporting (E_ALL);
 
 // Verbind met de database (connection.php bevat je PDO connectie)
 include ("../includes/connection.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -33,12 +34,13 @@ include ("../includes/connection.php");
             <!-- FORM: stuurt data naar insert.php -->
             <form action="insert.php" method="POST" class="insert-form">
                 naam
-                <input name="naam" required type="text" placeholder="naam">
+                <input name="naam" required type="text" placeholder="naam" value="Testnaam">
                 email
-                <input type="text" name="email" required class="email" placeholder="email">
+                <input type="text" name="email" required class="email" placeholder="email" value="519561@vistacollege.nl" >
 
                 datum
-                <input type="date" name="start-date" required id="start" value="" placeholder="datum" min="2026-04-25" max="2026-04-26">
+                <input type="date" name="datum" required id="start" value="" placeholder="datum" 
+                        min="2026-04-25" max="2026-04-26" value="2026-04-26">
 
                 <br><br>
                 <input class="order-button" type="submit" value="bestel jouw kaartje">
