@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Spik en Span Tickets</title>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      margin: 10px 0;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;  
+      border-radius: 8px;
+      background: #ff7e5f;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff4e2f;
+    }
+
+    #ticket {
+      margin-top: 20px;
+      padding: 15px;
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+    }
+
+    #qrcode {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+   
+    <img src="images.png">
+    <h1>🎉 Spik en Span</h1>
+    <p>Koop je ticket</p>
+
+    <input type="text" id="naam" placeholder="Jouw naam">
+
+    <button onclick="maakTicket()">Koop ticket</button>
+
+    <div id="ticket" style="display:none;">
+      <h3>🎟️ Jouw Ticket</h3>
+      <p id="ticketNaam"></p>
+      <p id="ticketCode"></p>
+      <div id="qrcode"></div>
+    </div>
+
+  </div>
+
+  <script>
+    function maakTicket() {
+      let naam = document.getElementById("naam").value;
+
+      if (!naam) {
+        alert("Vul je naam in!");
+        return;
+      }
+
+      let code = "TICKET-" + Math.floor(Math.random() * 1000000);
+
+      document.getElementById("ticket").style.display = "block";
+      document.getElementById("ticketNaam").innerText = "Naam: " + naam;
+      document.getElementById("ticketCode").innerText = "Code: " + code;
+
+      document.getElementById("qrcode").innerHTML = "";
+
+      new QRCode(document.getElementById("qrcode"), {
+        text: naam + " | " + code,
+        width: 180,
+        height: 180
+      });
+    }
+  </script>
+
+</body>
+</html>
