@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:"Poppins";
+    box-sizing: border-box;
+}
+
+body{
+    background: #f0f0f0; /*kan aangepast worden*/
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background: gainsboro; /*kan aangepast worden*/
+    padding: 2rem;
+    border-radius: 5px;
+    margin: 1rem;
+    min-width: 500px;
+    /*box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
+}
+
+.container h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.qrCodeView{
+    padding: 25px;
+    margin-bottom: 15px;
+    border: 2px dashed black; /*kan aangepast worden*/
+    text-align: center;
+    color: rgb(37, 75, 107); /*kan aangepast worden*/
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.qrCodeView i{
+    font-size: 55px;
+    padding: 3rem;
+    cursor: pointer;
+}
+
+.qrCodeView p{
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.qrCodeView video, .qrTextDetails{
+    display: none;
+}
+ 
+#qrImage{
+    width: 250px;
+    display: none;
+}
+
+.qrTextDetails textarea{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 16px;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid black; /*kan aangepast worden*/
+}
+
+.qrTextDetails .btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.qrTextDetails button{
+    width: 45%;
+    height: 45px;
+    background: rgb(77, 110, 145); /*kan aangepast worden*/
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white; /*kan aangepast worden*/
+    font-size: 16px;
+}
+
+#stopScan{
+    display: none;
+    position: relative;
+    top: 2px;
+    left: 5px;
+    color: crimson; /*kan aangepast worden*/
+    cursor: pointer;
+}
+
+img,video{
+    max-width: 300px;
+}
